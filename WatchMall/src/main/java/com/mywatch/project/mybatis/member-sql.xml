@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Member">
+	<insert id="insert_member" parameterType="Member">
+		INSERT INTO member (
+			M_NUM,
+			M_ID,
+			M_PW,
+			M_NAME,
+			M_AGE,
+			M_PHONE,
+			M_ADDR
+		) VALUES (
+			member_seq.nextval,
+			#{m_id},
+			#{m_pw},
+			#{m_name},
+			#{m_age},
+			#{m_phone},
+			#{m_addr}
+		)
+	</insert>
+	
+	<select id="member_check" resultType="Member">
+		SELECT M_ID, M_PW, M_NAME, M_NUM
+		FROM MEMBER
+		WHERE M_ID=#{m_id} and M_PW=#{m_pw}
+	</select>
+	
+	<select id="member_list" resultType="Member">
+		SELECT * FROM MEMBER
+	</select>
+	
+	<delete id="member_delete" parameterType="int">
+		DELETE FROM MEMBER WHERE M_NUM=#{m_num}
+	</delete>
+	
+	<select id="member_detail" resultType="Member">
+		SELECT * FROM MEMBER
+		WHERE M_NUM=#{m_num}
+	</select>
+	
+	<update id="member_update" parameterType="Member">
+		UPDATE MEMBER
+		SET
+		M_PW=#{m_pw},
+		M_AGE=#{m_age},
+		M_PHONE=#{m_phone},
+		M_ADDR=#{m_addr}
+		WHERE M_NUM=#{m_num}
+	</update>
+</mapper>

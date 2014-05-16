@@ -1,0 +1,9 @@
+@CHARSET "EUC-KR";
+
+div#board_container {
+	width: 500px;
+	background: #F2F2F2;
+	border-style: solid;
+	border-color: #00FFA9;
+	padding: 50px;
+}

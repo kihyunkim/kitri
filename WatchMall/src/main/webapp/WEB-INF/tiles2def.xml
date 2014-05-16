@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  tiles-definitions PUBLIC
+	"-//Aapche Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd"
+>
+
+<tiles-definitions>
+	<definition name="base_layout" template="/WEB-INF/views/layout/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/layout/menu.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<!-- 해당 view에 위에서 정의한 base_layout을 상속받아 주입함. -->
+	<definition name="common/main" extends="base_layout">
+		<put-attribute name="body" value="/WEB-INF/views/common/main.jsp" />
+	</definition>
+	<definition name="member/login" extends="base_layout">
+		<put-attribute name="body" value="/WEB-INF/views/member/login.jsp" />
+	</definition>
+	<definition name="member/insert" extends="base_layout">
+		<put-attribute name="body" value="/WEB-INF/views/member/insert.jsp" />
+	</definition>
+	<definition name="member/insert_result" extends="base_layout">
+		<put-attribute name="body" value="/WEB-INF/views/member/insert_result.jsp" />
+	</definition>
+	<definition name="admin/adminPage" extends="base_layout">
+		<put-attribute name="body" value="/WEB-INF/views/admin/adminPage.jsp" />
+	</definition>
+	<definition name="member/list" extends="base_layout">
+		<put-attribute name="body" value="/WEB-INF/views/member/list.jsp" />
+	</definition>
+	<definition name="member/mypage" extends="base_layout">
+		<put-attribute name="body" value="/WEB-INF/views/member/mypage.jsp" />
+	</definition>
+	<definition name="member/detail" extends="base_layout">
+		<put-attribute name="body" value="/WEB-INF/views/member/detail.jsp" />
+	</definition>
+	<definition name="board/list" extends="base_layout">
+		<put-attribute name="body" value="/WEB-INF/views/board/list.jsp" />
+	</definition>
+</tiles-definitions>

@@ -1,0 +1,42 @@
+@CHARSET "EUC-KR";
+
+/* login.jsp */
+div#input_container {
+	width: 300px;
+	height: 150px;
+	background: #F2F2F2;
+	border-style: solid;
+	border-color: #00FFA9;
+	padding: 50px;
+}
+
+/* insert_result.jsp */
+div#result_container {
+	width: 200px;
+	height: 400px;
+	background: #F2F2F2;
+	border-style: solid;
+	border-color: #00FFA9;
+	padding: 20px;
+	margin-top: 50px;
+}
+
+/* list.jsp */
+div#list_container {
+	width: 800px;
+	background: #F2F2F2;
+	border-style: solid;
+	border-color: #00FFA9;
+	padding: 30px;
+}
+
+/* detail.jsp */
+div#detail_container {
+	width: 400px;
+	height: 600px;
+	background: #F2F2F2;
+	border-style: solid;
+	border-color: #00FFA9;
+	padding: 20px;
+	margin-top: 50px;
+}
